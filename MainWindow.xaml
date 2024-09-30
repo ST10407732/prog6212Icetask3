@@ -1,0 +1,53 @@
+﻿<Window x:Class="Prog2BIceTask3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prog2BIceTask3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#2C2C2C">
+        <StackPanel Margin="20">
+            <TextBlock Text="Personal Finance Tracker" FontSize="24" Foreground="Orange" Margin="0,0,0,20" />
+
+            <!-- Add Transaction Section -->
+            <TextBlock Text="Add Transaction:" FontSize="18" Foreground="Orange" Margin="0,0,0,10"/>
+            <TextBlock Text="Amount" Foreground="White" />
+            <TextBox Name="TransactionAmount" Width="300" />
+
+            <TextBlock Text="Date" Foreground="White" />
+            <DatePicker Name="TransactionDate" Width="300" />
+
+            <TextBlock Text="Type" Foreground="White" />
+            <ComboBox Name="TransactionType" Width="300">
+                <ComboBoxItem Content="Income" />
+                <ComboBoxItem Content="Expense" />
+            </ComboBox>
+
+            <TextBlock Text="Category" Foreground="White" />
+            <ComboBox Name="TransactionCategory" Width="300">
+                <ComboBoxItem Content="Groceries" />
+                <ComboBoxItem Content="Rent" />
+                <ComboBoxItem Content="Salary" />
+                <ComboBoxItem Content="Utilities" />
+                <!-- More categories -->
+            </ComboBox>
+
+            <Button Content="Add Transaction" Width="300" Background="Orange" Foreground="White" Click="AddTransaction_Click" />
+
+            <!-- Budget Section -->
+            <TextBlock Text="Set Monthly Budget:" FontSize="18" Foreground="Orange" Margin="20,0,0,10"/>
+            <TextBlock Text="Income Goal" Foreground="White" />
+            <TextBox Name="IncomeGoalInput" Width="300" />
+
+            <TextBlock Text="Expense Limit" Foreground="White" />
+            <TextBox Name="ExpenseLimitInput" Width="300" />
+
+            <Button Content="Set Budget" Width="300" Background="Orange" Foreground="White" Click="SetBudget_Click" />
+
+            <!-- View Report Section -->
+            <Button Content="View Report" Width="300" Background="Orange" Foreground="White" Click="OpenReportWindow_Click" />
+        </StackPanel>
+    </Grid>
+
+</Window>
